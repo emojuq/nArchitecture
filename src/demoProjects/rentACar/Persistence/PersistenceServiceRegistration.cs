@@ -26,3 +26,7 @@ namespace Persistence
         }
     }
 }
+
+//CQRS- Klasik bir uygulamada class açıyoruz. bütün metodları ona yerleştiriyoruz.
+//query ise adı üstünde en basit haliyle select operasyonlarını yazacağımız şeyler,comment database'de değişiklik yapan insert,update, delete operasyonları yapan şeyler
+//İşte CQRS, uygulamalarımızda bu istekleri karşılayacak olan yapılanmaları birbirinden ayırmamızı önermektedir.

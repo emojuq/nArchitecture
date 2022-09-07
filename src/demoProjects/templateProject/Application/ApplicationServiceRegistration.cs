@@ -36,4 +36,6 @@ namespace Application
 
         }
     }
+
+    //burası bizim aplikasyon katmanının injectionlarını yaptığımız yer.
 }
