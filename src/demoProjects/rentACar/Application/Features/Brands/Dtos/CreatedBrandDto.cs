@@ -11,4 +11,6 @@ namespace Application.Features.Brands.Dtos
         public int Id { get; set; }
         public string Name { get; set; }
     }
+
+    //Bu Dto sayesinde Brand database'imizden sadece id ve name'i göstererek diğer kolonları göstermemiş oluyoruz
 }
