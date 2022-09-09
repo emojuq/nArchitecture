@@ -1,5 +1,8 @@
 ﻿using Application.Features.Brands.Commands.CreateBrand;
 using Application.Features.Brands.Dtos;
+using Application.Features.Brands.Models;
+using Application.Features.Brands.Queries.GetListBrand;
+using Core.Application.Requests;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -19,6 +22,16 @@ namespace WebAPI.Controllers
 
             return Created("", result);//kullanıcıya geri dönüş olarak istersek tırnak içine api adresinide verebiliriz.
                                        //Result olarakta dto yani response için verilen bilgiler döner.
+        }
+
+
+        [HttpGet]
+        public async Task<IActionResult> GetList([FromQuery] PageRequest pageRequest)
+        {
+            GetListBrandQuery getListBrandQuery = new() { pageRequest = pageRequest };
+            BrandListModel result=await Mediator.Send(getListBrandQuery);
+            return Ok(result);
+           
         }
     }
 }

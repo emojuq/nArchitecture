@@ -30,7 +30,7 @@ if (app.Environment.IsDevelopment())
 }
 
 
-if (app.Environment.IsProduction())
+//if (app.Environment.IsProduction())       //developer moddur bu
     app.ConfigureCustomExceptionMiddleware();
 
 app.UseAuthorization();
